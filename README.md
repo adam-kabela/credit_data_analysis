@@ -3,7 +3,7 @@
 
 Two data analysis tasks on credit data from Home Credit Kaggle Credit Risk.
 Each task is solved with a separate short code using pandas.
-The data sets are available as https://www.kaggle.com/competitions/home-credit-default-risk/data.
+The datasets are available as https://www.kaggle.com/competitions/home-credit-default-risk/data.
 
 ## A task on median DTI
 
