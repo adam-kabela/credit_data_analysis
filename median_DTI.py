@@ -5,10 +5,18 @@ adam kabela
 """
 import pandas
 
-# is AMT_INCOME_TOTAL the client's annual income (or is it monthly and should by multiplied by 12?)
 application_columns = ['SK_ID_CURR','AMT_INCOME_TOTAL','AMT_CREDIT','NAME_INCOME_TYPE']
 application = pandas.read_csv('data/application_train.csv', usecols = application_columns)
 #print(application.head(10)) # see a few rows to get a basic idea 
+
+#is AMT_INCOME_TOTAL the client's annual income (or is it monthly and should by multiplied by 12?)
+#credit_card_balance_columns = ['SK_ID_CURR','MONTHS_BALANCE','AMT_BALANCE','AMT_DRAWINGS_CURRENT','AMT_PAYMENT_TOTAL_CURRENT','AMT_TOTAL_RECEIVABLE']
+#credit_card_balance = pandas.read_csv('data/credit_card_balance.csv', usecols = credit_card_balance_columns)
+#spent_and_income = pandas.merge(application, credit_card_balance, on ='SK_ID_CURR')
+#spent_and_income = spent_and_income[spent_and_income['AMT_BALANCE'] > 0]
+#spent_and_income = spent_and_income.sort_values(['SK_ID_CURR','MONTHS_BALANCE'])
+#spent_and_income.to_csv('amounts_to_maybe_look_at.csv')
+# ok, AMT_INCOME_TOTAL is annual based on this look and the resulting DMI values...
 
 # we suppose that all items have the same CREDIT_CURRENCY
 bureau_columns = ['SK_ID_CURR','CREDIT_ACTIVE','AMT_CREDIT_SUM']
