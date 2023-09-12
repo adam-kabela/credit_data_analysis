@@ -16,7 +16,7 @@ application = pandas.read_csv('data/application_train.csv', usecols = applicatio
 #spent_and_income = spent_and_income[spent_and_income['AMT_BALANCE'] > 0]
 #spent_and_income = spent_and_income.sort_values(['SK_ID_CURR','MONTHS_BALANCE'])
 #spent_and_income.to_csv('amounts_to_maybe_look_at.csv')
-# ok, AMT_INCOME_TOTAL is annual based on this look and the resulting DMI values...
+# ok, AMT_INCOME_TOTAL is annual. This conclusion is based on this look, the resulting DMI values and googling...
 
 # we suppose that all items have the same CREDIT_CURRENCY
 bureau_columns = ['SK_ID_CURR','CREDIT_ACTIVE','AMT_CREDIT_SUM']
